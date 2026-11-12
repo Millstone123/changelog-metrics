@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "changelog-metrics"
+version = "0.1.0"
+description = "Release changelog metrics and report rendering"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+changelog-metrics = "changelog_metrics.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["changelog_metrics*"]
