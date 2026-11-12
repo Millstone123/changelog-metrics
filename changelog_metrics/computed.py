@@ -11,7 +11,7 @@ def evaluate_fields(entry: Dict[str, str]) -> Dict[str, str]:
     resolved: Dict[str, str] = {}
     for name, value in entry.items():
         if value.startswith("{") and value.endswith("}"):
-            resolved[name] = str(eval(value[1:-1], {"platform": platform, "__builtins__": {}}, {}))
+            resolved[name] = str(eval(value[1:-1], {"platform": platform}, {}))
         else:
             resolved[name] = value
     return resolved
