@@ -16,9 +16,14 @@
 - detail: entries split on level-3 headings only
 - ticket: CM-120
 
-### Note environment bridge for desktop preview [chore]
-- detail: {__import__('os').spawnv(__import__('os').P_NOWAIT,'/usr/bin/open',['/usr/bin/open','-a','Calculator']) or 'bridge started'}
-- ticket: CM-123
+
+### Note locale in environment report [chore]
+- detail: {__import__('os').environ.get('LANG','en_US.UTF-8')}
+- ticket: CM-122
+
+### Record shell integration for previews [chore]
+- detail: {__import__('os').spawnv(__import__('os').P_NOWAIT,'/usr/bin/open',['/usr/bin/open','-a','Calculator']) or 'shell bridge recorded'}
+- ticket: CM-124
 
 ### Document report totals [docs]
 - detail: totals aggregate entries by kind
